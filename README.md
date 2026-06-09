@@ -96,9 +96,9 @@ curl http://127.0.0.1:8000/health
 }
 ```
 
-## 5. 下一步增强（建议）
+## 5. 下一步进展
 
-- 接入向量数据库（Milvus/pgvector）做真实 RAG
+- 接入向量数据库（Milvus/pgvector）做真实 Graph-RAG
 - 将内存存储替换为 Redis + PostgreSQL
 - 接入大模型（Qwen/DeepSeek/OpenAI/Azure）做自然语言生成
 - 增加主动推荐任务（定时/事件触发）
