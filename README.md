@@ -1,4 +1,4 @@
-# Wenlv Digital Human Agent (MVP)
+﻿# Wenlv Digital Human Agent (MVP)
 
 面向文旅场景的数字人 Agent 后端 MVP，支持：
 
@@ -14,10 +14,16 @@
 ## 1. 快速启动
 
 ```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+python -m venv C:\Users\Lenovo\.venvs\wenlv-agent
+C:\Users\Lenovo\.venvs\wenlv-agent\Scripts\python.exe -m pip install -r requirements.txt
+C:\Users\Lenovo\.venvs\wenlv-agent\Scripts\python.exe -m pytest -q
+C:\Users\Lenovo\.venvs\wenlv-agent\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+```
+
+前端 Demo：
+
+```bash
+http://127.0.0.1:8000/demo
 ```
 
 健康检查：
@@ -103,3 +109,9 @@ curl http://127.0.0.1:8000/health
 - 接入大模型（Qwen/DeepSeek/OpenAI/Azure）做自然语言生成
 - 增加主动推荐任务（定时/事件触发）
 - 增加运营后台看板（转化、满意度、推荐点击率）
+
+
+
+
+
+

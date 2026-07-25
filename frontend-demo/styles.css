@@ -1,0 +1,132 @@
+﻿:root {
+  color-scheme: light;
+  --paper: #f7efe3;
+  --paper-strong: #fffaf1;
+  --ink: #2b211b;
+  --muted: #75675d;
+  --line: #e2d4c3;
+  --brick: #a84632;
+  --brick-deep: #7d2f23;
+  --indigo: #26445f;
+  --gold: #d69b38;
+  --card: rgba(255, 250, 241, 0.9);
+  --shadow: 0 18px 50px rgba(71, 42, 25, 0.13);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, rgba(168, 70, 50, 0.08), rgba(214, 155, 56, 0.1)), var(--paper);
+}
+button, input { font: inherit; }
+.app-shell {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(360px, 1.35fr) minmax(280px, 0.85fr);
+  gap: 18px;
+  min-height: 100vh;
+  padding: 18px;
+}
+.scene-panel, .conversation-panel, .decision-panel {
+  min-width: 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+.scene-panel, .decision-panel { padding: 20px; }
+.conversation-panel { display: flex; flex-direction: column; overflow: hidden; }
+.brand-block h1, .panel-header h2, .scenario-list h2 { margin: 0; letter-spacing: 0; }
+.brand-block h1 { font-size: 28px; line-height: 1.18; }
+.eyebrow { margin: 0 0 8px; color: var(--brick); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.subtitle { margin: 10px 0 0; color: var(--muted); line-height: 1.6; }
+.status-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+.status-grid div, .trace-stack article { border: 1px solid var(--line); border-radius: 8px; background: rgba(255, 255, 255, 0.48); }
+.status-grid div { padding: 12px; }
+.status-grid span, .trace-stack span { display: block; margin-bottom: 6px; color: var(--muted); font-size: 12px; }
+.status-grid strong { display: block; font-size: 14px; line-height: 1.45; }
+.map-card {
+  position: relative;
+  height: 230px;
+  margin-top: 18px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: linear-gradient(120deg, rgba(38, 68, 95, 0.08), rgba(168, 70, 50, 0.08)), repeating-linear-gradient(45deg, rgba(255,255,255,0.22) 0 8px, transparent 8px 16px);
+}
+.map-line { position: absolute; left: 16%; right: 14%; top: 53%; height: 3px; background: linear-gradient(90deg, var(--brick), var(--gold), var(--indigo)); transform: rotate(-7deg); opacity: 0.72; }
+.map-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  min-width: 62px;
+  min-height: 36px;
+  padding: 6px 10px;
+  border: 1px solid rgba(168, 70, 50, 0.3);
+  border-radius: 999px;
+  color: var(--brick-deep);
+  background: var(--paper-strong);
+  cursor: pointer;
+}
+.map-node.active, .map-node:hover { color: white; background: var(--brick); }
+.map-node.spark { border-color: rgba(214, 155, 56, 0.7); }
+.scenario-list { margin-top: 18px; }
+.scenario-list h2 { font-size: 16px; }
+.scenario-list button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid rgba(168, 70, 50, 0.24);
+  border-radius: 8px;
+  color: var(--ink);
+  text-align: left;
+  background: rgba(255, 250, 241, 0.7);
+  cursor: pointer;
+}
+.scenario-list button:hover { border-color: var(--brick); background: white; }
+.panel-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 20px; border-bottom: 1px solid var(--line); }
+.panel-header h2 { font-size: 20px; }
+.api-state { padding: 6px 10px; border-radius: 999px; color: var(--indigo); background: rgba(38, 68, 95, 0.1); font-size: 12px; }
+.api-state.ok { color: #276046; background: rgba(39, 96, 70, 0.13); }
+.api-state.error { color: var(--brick-deep); background: rgba(168, 70, 50, 0.12); }
+.messages { flex: 1; overflow: auto; padding: 20px; }
+.proactive-card {
+  margin: 14px 20px 0;
+  padding: 14px;
+  border: 1px solid rgba(168, 70, 50, 0.28);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255, 250, 241, 0.95), rgba(214, 155, 56, 0.12));
+}
+.proactive-card.empty { opacity: 0.72; }
+.proactive-card span { display: block; margin-bottom: 5px; color: var(--muted); font-size: 12px; font-weight: 700; }
+.proactive-card strong { display: block; color: var(--brick-deep); }
+.proactive-card p { margin: 7px 0 0; color: var(--ink); line-height: 1.6; }
+.proactive-actions { display: flex; gap: 8px; margin-top: 10px; }
+.proactive-actions button {
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(168, 70, 50, 0.32);
+  border-radius: 8px;
+  color: var(--brick-deep);
+  background: white;
+  cursor: pointer;
+}
+.proactive-actions button:first-child { color: white; background: var(--brick); }
+.proactive-card.empty .proactive-actions { display: none; }
+.message { margin-bottom: 14px; }
+.message-role { margin-bottom: 6px; color: var(--muted); font-size: 12px; font-weight: 700; }
+.message-body { max-width: 94%; padding: 13px 14px; border-radius: 8px; line-height: 1.7; white-space: pre-wrap; }
+.message.user .message-body { margin-left: auto; color: white; background: var(--indigo); }
+.message.assistant .message-body { border: 1px solid var(--line); background: var(--paper-strong); }
+.message.system .message-body { border-left: 4px solid var(--gold); background: rgba(214, 155, 56, 0.11); }
+.card-list { display: grid; gap: 8px; margin-top: 10px; }
+.result-card { padding: 11px 12px; border: 1px solid var(--line); border-radius: 8px; background: white; }
+.result-card strong { display: block; margin-bottom: 4px; color: var(--brick-deep); }
+.chat-form { display: flex; gap: 10px; padding: 14px; border-top: 1px solid var(--line); background: rgba(255, 250, 241, 0.8); }
+.chat-form input { flex: 1; min-width: 0; padding: 12px 13px; border: 1px solid var(--line); border-radius: 8px; background: white; }
+.chat-form button { padding: 0 18px; border: 0; border-radius: 8px; color: white; background: var(--brick); cursor: pointer; }
+.trace-stack { display: grid; gap: 12px; padding-top: 16px; }
+.trace-stack article { padding: 14px; }
+.trace-stack p { margin: 0; line-height: 1.65; }
+@media (max-width: 1120px) { .app-shell { grid-template-columns: 1fr; } .conversation-panel { min-height: 620px; } }
+@media (max-width: 620px) { .app-shell { padding: 10px; } .status-grid { grid-template-columns: 1fr; } .chat-form { flex-direction: column; } .chat-form button { min-height: 42px; } }

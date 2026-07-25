@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>暖泉古镇情境感知数字人 Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="scene-panel">
+        <div class="brand-block">
+          <p class="eyebrow">Nuanquan Ancient Town</p>
+          <h1>暖泉古镇情境感知数字人</h1>
+          <p class="subtitle">Context + Memory + Graph RAG + Tool Calling 的概念验证 Demo</p>
+        </div>
+        <div class="status-grid">
+          <div><span>场景</span><strong>蔚县暖泉古镇</strong></div>
+          <div><span>当前位置</span><strong id="currentLocation">暖泉古镇入口</strong></div>
+          <div><span>用户状态</span><strong id="currentPersona">亲子家庭 / 初次到访</strong></div>
+          <div><span>兴趣信号</span><strong id="currentInterest">西古堡、剪纸、打树花</strong></div>
+        </div>
+        <div class="map-card" aria-label="暖泉古镇概念点位图">
+          <div class="map-line"></div>
+          <button class="map-node active" style="left: 13%; top: 62%" data-location="暖泉古镇入口">入口</button>
+          <button class="map-node" style="left: 31%; top: 42%" data-location="西古堡">西古堡</button>
+          <button class="map-node" style="left: 49%; top: 58%" data-location="蔚县剪纸体验点">剪纸</button>
+          <button class="map-node" style="left: 67%; top: 36%" data-location="暖泉当铺">当铺</button>
+          <button class="map-node spark" style="left: 82%; top: 55%" data-location="打树花表演区">打树花</button>
+        </div>
+        <div class="scenario-list">
+          <h2>一键演示场景</h2>
+          <button data-scenario="family">第一次来，带孩子，还有 2 小时</button>
+          <button data-scenario="xigubao">西古堡有什么特别？</button>
+          <button data-scenario="papercut">孩子对剪纸感兴趣</button>
+          <button data-scenario="dashuhua">晚上想看打树花</button>
+          <button data-scenario="products">有什么适合带走的纪念品？</button>
+        </div>
+      </section>
+      <section class="conversation-panel">
+        <header class="panel-header">
+          <div><p class="eyebrow">Live Demo</p><h2>数字人主动服务</h2></div>
+          <span id="apiState" class="api-state">待连接</span>
+        </header>
+        <div id="proactiveCard" class="proactive-card empty">
+          <span>主动服务</span>
+          <strong>等待用户状态变化</strong>
+          <p>当用户进入点位、停留或表达兴趣后，这里会出现轻提示。</p>
+          <div class="proactive-actions">
+            <button id="acceptDecision" type="button">接受</button>
+            <button id="dismissDecision" type="button">先不用</button>
+          </div>
+        </div>
+        <div id="messages" class="messages" aria-live="polite"></div>
+        <form id="chatForm" class="chat-form">
+          <input id="chatInput" type="text" placeholder="输入一句游客问题，例如：西古堡有什么特别？" />
+          <button type="submit">发送</button>
+        </form>
+      </section>
+      <aside class="decision-panel">
+        <header class="panel-header">
+          <div><p class="eyebrow">Decision Trace</p><h2>系统如何决策</h2></div>
+        </header>
+        <div class="trace-stack">
+          <article><span>Context</span><p id="contextTrace">等待游客输入。系统将读取场景、位置、同行关系、时间与兴趣信号。</p></article>
+          <article><span>Memory</span><p id="memoryTrace">当前用户记忆为空。互动后会沉淀亲子、非遗、夜游等偏好。</p></article>
+          <article><span>Tool Calling</span><p id="toolTrace">待调用路线推荐、Graph RAG 讲解、文创推荐等工具。</p></article>
+          <article><span>Trust</span><p id="trustTrace">文化讲解将展示证据来源；动态运营信息会提示需现场确认。</p></article>
+          <article><span>本次记忆</span><p id="sessionMemoryTrace">还没有本次游览记忆。</p></article>
+          <article><span>服务链路</span><p id="serviceFlowTrace">等待用户状态变化。</p></article>
+        </div>
+      </aside>
+    </main>
+    <template id="messageTemplate">
+      <article class="message"><div class="message-role"></div><div class="message-body"></div></article>
+    </template>
+    <script src="./script.js"></script>
+  </body>
+</html>

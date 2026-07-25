@@ -1,0 +1,404 @@
+{
+  "venue": {
+    "id": "nuanquan_ancient_town",
+    "name": "蔚县暖泉古镇",
+    "location": {
+      "province": "河北省",
+      "city": "张家口市",
+      "county": "蔚县",
+      "town": "暖泉镇"
+    },
+    "positioning": "古堡建筑、非遗表演、剪纸工艺、古镇漫游与文创消费融合的开放式文化体验场",
+    "demo_scope": "P0 阶段仅覆盖核心点位、示范路线、互动任务与消费推荐，不代表完整景区数据。",
+    "data_status": "draft_for_review"
+  },
+  "sources": [
+    {
+      "id": "source_nuanquan_town",
+      "title": "暖泉镇（蔚县）基础信息",
+      "url": "https://zh.wikipedia.org/wiki/%E6%9A%96%E6%B3%89%E9%95%87_%28%E8%94%9A%E5%8E%BF%29",
+      "notes": "用于确认暖泉镇历史文化名镇、中国传统村落和打树花民俗等基础信息。"
+    },
+    {
+      "id": "source_xigubao",
+      "title": "西古堡基础信息",
+      "url": "https://zh.wikipedia.org/wiki/%E8%A5%BF%E5%8F%A4%E5%A0%A1",
+      "notes": "用于确认西古堡为明清古建筑、全国重点文物保护单位。"
+    },
+    {
+      "id": "source_heritage_units",
+      "title": "蔚县各级文物保护单位列表",
+      "url": "https://zh.wikipedia.org/wiki/%E8%94%9A%E5%8E%BF%E5%90%84%E7%BA%A7%E6%96%87%E7%89%A9%E4%BF%9D%E6%8A%A4%E5%8D%95%E4%BD%8D%E5%88%97%E8%A1%A8",
+      "notes": "用于交叉确认西古堡、暖泉华严寺、暖泉当铺、沙子坡老君观等文保信息。"
+    },
+    {
+      "id": "source_huayan_temple",
+      "title": "暖泉华严寺基础信息",
+      "url": "https://zh.wikipedia.org/wiki/%E6%9A%96%E6%B3%89%E5%8D%8E%E4%B8%A5%E5%AF%BA",
+      "notes": "用于确认暖泉华严寺历史、建筑形制、水陆壁画、佛镜等信息。"
+    },
+    {
+      "id": "source_pawnshop",
+      "title": "暖泉当铺基础信息",
+      "url": "https://zh.wikipedia.org/wiki/%E6%9A%96%E6%B3%89%E5%BD%93%E9%93%BA",
+      "notes": "用于确认暖泉当铺位于暖泉镇煤市街，为清代古建筑和省级文物保护单位。"
+    },
+    {
+      "id": "source_papercut_ich",
+      "title": "国家级非物质文化遗产代表性项目名录：剪纸（蔚县剪纸）",
+      "url": "https://zh.wikipedia.org/wiki/%E5%9B%BD%E5%AE%B6%E7%BA%A7%E9%9D%9E%E7%89%A9%E8%B4%A8%E6%96%87%E5%8C%96%E9%81%97%E4%BA%A7%E4%BB%A3%E8%A1%A8%E6%80%A7%E9%A1%B9%E7%9B%AE%E5%90%8D%E5%BD%95",
+      "notes": "用于确认蔚县剪纸属于国家级非遗剪纸项目。"
+    },
+    {
+      "id": "source_yuzhou_museum",
+      "title": "蔚州博物馆与蔚县剪纸专题展信息",
+      "url": "https://zh.wikipedia.org/wiki/%E8%94%9A%E5%B7%9E%E5%8D%9A%E7%89%A9%E9%A6%86",
+      "notes": "用于补充蔚县历史文化和剪纸展陈主题。"
+    }
+  ],
+  "spots": [
+    {
+      "id": "spot_xigubao",
+      "name": "西古堡",
+      "type": "heritage_site",
+      "area": "暖泉镇西古堡区域",
+      "summary": "暖泉古镇最适合作为核心讲解起点的古堡点位，具备明清古建筑和文保价值。",
+      "story": "西古堡位于暖泉镇西古堡区域，是蔚县古堡文化的重要代表。资料显示其为明清古建筑，已列入全国重点文物保护单位。对数字人体验而言，西古堡适合承担“古镇为什么值得逛”的第一段解释：它能把防御、居住、街巷、民俗和地方记忆串在一起，让游客先建立空间感，再进入非遗和文创体验。",
+      "tags": ["古堡", "明清建筑", "全国重点文物保护单位", "空间导览", "摄影"],
+      "suitable_for": ["first_time_visitor", "culture_deep", "photography", "family"],
+      "recommended_duration_minutes": 25,
+      "trigger_services": ["opening_explanation", "deep_story", "route_next", "photo_tip"],
+      "related_tasks": ["task_find_fortress_detail", "task_photo_story"],
+      "related_products": ["product_fortress_postcard", "product_papercut_bookmark"],
+      "evidence": ["source_xigubao", "source_heritage_units"],
+      "confidence": "verified_basic_info",
+      "requires_verification": ["游客入口", "开放状态", "内部可游览范围", "最佳拍摄点"]
+    },
+    {
+      "id": "spot_huayan_temple",
+      "name": "暖泉华严寺",
+      "type": "temple_heritage",
+      "area": "暖泉镇东南区域",
+      "summary": "以古建筑、彩绘和水陆壁画为主要讲解价值的深度文化点位。",
+      "story": "暖泉华严寺又称大寺，资料显示其历史可追溯至唐代，至晚在明代洪武年间已有修建记录。寺内现存前殿、后殿和配殿，前殿保存水陆壁画，殿内还有天花和彩绘。寺前的佛镜水池也适合用于讲述暖泉地名、寺庙空间和古镇水文化之间的关系。该点位适合面向文化深度用户提供证据型讲解。",
+      "tags": ["寺庙", "水陆壁画", "彩绘", "全国重点文物保护单位", "古建筑"],
+      "suitable_for": ["culture_deep", "quiet_tour", "research", "photography"],
+      "recommended_duration_minutes": 20,
+      "trigger_services": ["evidence_explanation", "quiet_mode", "art_detail"],
+      "related_tasks": ["task_find_painted_motif"],
+      "related_products": ["product_mural_pattern_card", "product_papercut_art"],
+      "evidence": ["source_huayan_temple", "source_heritage_units"],
+      "confidence": "verified_basic_info",
+      "requires_verification": ["开放状态", "室内拍摄规则", "壁画保护讲解边界"]
+    },
+    {
+      "id": "spot_pawnshop",
+      "name": "暖泉当铺",
+      "type": "historic_commerce",
+      "area": "暖泉镇煤市街",
+      "summary": "适合讲述古镇商业、信用关系和生活记忆的清代商业建筑点位。",
+      "story": "暖泉当铺位于暖泉镇煤市街，资料显示其为清代古建筑，列入河北省第五批文物保护单位。这个点位特别适合本项目的“信任机制”主题：当铺本身就是传统社会中围绕信用、抵押、周转形成的商业空间。数字人可以借此把古镇商业记忆与现代用户信任推荐连接起来，形成从文化讲解到消费服务的自然过渡。",
+      "tags": ["当铺", "清代建筑", "商业记忆", "信用", "省级文物保护单位"],
+      "suitable_for": ["culture_deep", "commerce_interest", "storytelling"],
+      "recommended_duration_minutes": 12,
+      "trigger_services": ["commerce_story", "trust_explanation", "product_recommendation"],
+      "related_tasks": ["task_old_commerce_clue"],
+      "related_products": ["product_old_town_notebook", "product_local_specialty_pack"],
+      "evidence": ["source_pawnshop", "source_heritage_units"],
+      "confidence": "verified_basic_info",
+      "requires_verification": ["是否开放参观", "展陈内容", "与当前商业街动线关系"]
+    },
+    {
+      "id": "spot_dashuhua_stage",
+      "name": "打树花表演区",
+      "type": "performance_area",
+      "area": "暖泉古镇夜游/演出区域",
+      "summary": "暖泉古镇最强视觉记忆点，适合夜游、摄影和主动时间提醒。",
+      "story": "打树花是暖泉镇最具辨识度的民俗表演元素之一。对 P0 Demo 来说，它是 Context 主动服务的关键节点：系统可以根据时间、用户兴趣和当前位置，提醒游客是否需要预留观看时间、如何安排夜游路线，以及观看前后的文创推荐。由于演出时间、票价、场地安排具有动态性，当前仅作为 Demo 数据，正式上线前必须由景区或运营方确认。",
+      "tags": ["打树花", "民俗表演", "夜游", "摄影", "强视觉体验"],
+      "suitable_for": ["night_tour", "photography", "first_time_visitor", "family"],
+      "recommended_duration_minutes": 45,
+      "trigger_services": ["time_reminder", "route_adjustment", "photo_tip", "safety_notice"],
+      "related_tasks": ["task_dashuhua_memory"],
+      "related_products": ["product_dashuhua_magnet", "product_fortress_postcard"],
+      "evidence": ["source_nuanquan_town"],
+      "confidence": "demo_only_dynamic_info",
+      "requires_verification": ["当前演出时间", "演出地点", "票价", "预约方式", "安全边界", "节假日变动"]
+    },
+    {
+      "id": "spot_papercut_experience",
+      "name": "蔚县剪纸体验点",
+      "type": "intangible_heritage_experience",
+      "area": "暖泉古镇文创/非遗体验区域",
+      "summary": "用于连接非遗讲解、亲子互动和文创推荐的核心体验点。",
+      "story": "蔚县剪纸属于国家级非遗剪纸项目。它适合在数字人系统中承担三类功能：第一，作为非遗知识讲解内容；第二，作为亲子和研学任务，比如识别纹样、理解刻染工艺；第三，作为文创推荐入口，把用户对颜色、纹样、历史故事的兴趣转化为可信消费建议。当前体验点名称和位置为示范数据，需要后续补充真实店铺或展馆信息。",
+      "tags": ["蔚县剪纸", "国家级非遗", "亲子互动", "研学", "文创"],
+      "suitable_for": ["family", "study_tour", "commerce_interest", "culture_deep"],
+      "recommended_duration_minutes": 25,
+      "trigger_services": ["task_trigger", "craft_explanation", "product_recommendation"],
+      "related_tasks": ["task_identify_papercut_pattern", "task_choose_symbol"],
+      "related_products": ["product_papercut_art", "product_papercut_bookmark"],
+      "evidence": ["source_papercut_ich", "source_yuzhou_museum"],
+      "confidence": "verified_theme_demo_location",
+      "requires_verification": ["真实体验店名称", "营业时间", "体验价格", "是否可预约"]
+    },
+    {
+      "id": "spot_old_streets",
+      "name": "古街巷与民居院落",
+      "type": "streetscape",
+      "area": "暖泉古镇街巷区域",
+      "summary": "适合自由漫游、摄影、生活方式讲解和低打扰推荐的开放点位。",
+      "story": "古街巷与民居院落是暖泉古镇的日常生活肌理。它不一定需要长篇讲解，更适合由数字人根据用户状态做轻量陪伴：摄影用户可以收到构图提示，亲子用户可以收到寻找门楼、砖雕、窗花纹样的任务，文化用户可以听到古堡聚落和民居生活方式的故事。此点位为场景型数据，需要后续结合实地地图细化。",
+      "tags": ["古街巷", "民居", "摄影", "慢游", "生活方式"],
+      "suitable_for": ["slow_tour", "photography", "family", "first_time_visitor"],
+      "recommended_duration_minutes": 30,
+      "trigger_services": ["light_explanation", "photo_tip", "ambient_task", "rest_hint"],
+      "related_tasks": ["task_find_fortress_detail", "task_photo_story"],
+      "related_products": ["product_old_town_notebook", "product_fortress_postcard"],
+      "evidence": ["source_nuanquan_town"],
+      "confidence": "demo_only",
+      "requires_verification": ["具体街巷名称", "推荐动线", "可进入院落", "游客安全边界"]
+    },
+    {
+      "id": "spot_laojun_temple",
+      "name": "沙子坡老君观",
+      "type": "temple_heritage",
+      "area": "暖泉镇区域",
+      "summary": "可作为扩展文化点位，用于补充宗教建筑和地方信仰主题。",
+      "story": "资料显示沙子坡老君观位于蔚县暖泉镇，属于明清古建筑，并列入文物保护单位相关列表。P0 阶段可先作为备用点位，用于扩展古建和地方信仰路线。由于当前资料较少，建议暂不作为主线必到点，而作为文化深度用户的可选推荐。",
+      "tags": ["老君观", "明清建筑", "地方信仰", "备用点位"],
+      "suitable_for": ["culture_deep", "research"],
+      "recommended_duration_minutes": 15,
+      "trigger_services": ["optional_spot_recommendation", "deep_story"],
+      "related_tasks": [],
+      "related_products": [],
+      "evidence": ["source_heritage_units"],
+      "confidence": "probable",
+      "requires_verification": ["准确位置", "开放状态", "讲解资料"]
+    },
+    {
+      "id": "spot_service_center",
+      "name": "游客服务与休息点",
+      "type": "service_area",
+      "area": "待确认",
+      "summary": "用于承接休息、卫生间、停车、票务、路线重规划等基础服务。",
+      "story": "服务点不是文化讲解核心，但对主动式数字人非常重要。当系统识别用户停留时间过长、亲子同行、天气不佳或临近演出时间时，需要给出休息、卫生间、停车、票务和路线重规划建议。当前为占位数据，需要根据景区真实设施补齐。",
+      "tags": ["游客服务", "休息", "停车", "卫生间", "票务"],
+      "suitable_for": ["family", "elderly", "first_time_visitor"],
+      "recommended_duration_minutes": 10,
+      "trigger_services": ["rest_hint", "ticket_hint", "route_replan", "weather_notice"],
+      "related_tasks": [],
+      "related_products": [],
+      "evidence": [],
+      "confidence": "demo_only",
+      "requires_verification": ["游客中心位置", "卫生间位置", "停车场位置", "票务规则"]
+    }
+  ],
+  "routes": [
+    {
+      "id": "route_first_visit_90min",
+      "name": "初次到访 90 分钟核心路线",
+      "target_users": ["first_time_visitor", "family"],
+      "duration_minutes": 90,
+      "spot_sequence": ["spot_service_center", "spot_xigubao", "spot_old_streets", "spot_papercut_experience", "spot_pawnshop"],
+      "recommendation_reason": "用较短时间覆盖古堡、街巷、非遗和古镇商业记忆，适合初次到访和轻量体验。",
+      "context_triggers": ["entry_detected", "available_time_60_120", "first_visit"],
+      "requires_verification": ["真实动线", "点位间步行时间"]
+    },
+    {
+      "id": "route_culture_deep",
+      "name": "古建与文化深度路线",
+      "target_users": ["culture_deep", "research", "photography"],
+      "duration_minutes": 120,
+      "spot_sequence": ["spot_xigubao", "spot_huayan_temple", "spot_pawnshop", "spot_laojun_temple", "spot_old_streets"],
+      "recommendation_reason": "围绕西古堡、华严寺、当铺和古街巷展开，适合对文保、建筑、壁画和地方生活史感兴趣的用户。",
+      "context_triggers": ["interest_culture_high", "dwell_time_long", "asks_history_question"],
+      "requires_verification": ["沙子坡老君观是否纳入主线", "各点位开放状态"]
+    },
+    {
+      "id": "route_heritage_family",
+      "name": "亲子非遗互动路线",
+      "target_users": ["family", "study_tour"],
+      "duration_minutes": 75,
+      "spot_sequence": ["spot_old_streets", "spot_papercut_experience", "spot_xigubao", "spot_service_center"],
+      "recommendation_reason": "减少长距离移动和深奥讲解，以寻找纹样、识别剪纸、古堡故事任务为主。",
+      "context_triggers": ["family_detected", "interaction_preference_high"],
+      "requires_verification": ["真实亲子安全动线", "剪纸体验点营业情况"]
+    },
+    {
+      "id": "route_night_dashuhua",
+      "name": "夜游打树花路线",
+      "target_users": ["night_tour", "photography", "first_time_visitor"],
+      "duration_minutes": 100,
+      "spot_sequence": ["spot_old_streets", "spot_pawnshop", "spot_dashuhua_stage", "spot_papercut_experience"],
+      "recommendation_reason": "围绕夜间表演和夜游氛围组织路线，适合摄影、打卡和非遗体验用户。",
+      "context_triggers": ["near_show_time", "interest_performance_high", "evening_visit"],
+      "requires_verification": ["打树花表演时间", "夜间开放范围", "夜游安全提示"]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task_find_fortress_detail",
+      "name": "寻找古堡细节",
+      "type": "observation",
+      "trigger_spots": ["spot_xigubao", "spot_old_streets"],
+      "description": "请在古堡或街巷中寻找一个门楼、砖雕、窗格或院落细节，并告诉数字人你看到了什么。",
+      "target_users": ["family", "photography", "first_time_visitor"],
+      "memory_signal": {"topic": "architecture", "strength": 0.2}
+    },
+    {
+      "id": "task_identify_papercut_pattern",
+      "name": "识别剪纸纹样",
+      "type": "heritage_learning",
+      "trigger_spots": ["spot_papercut_experience"],
+      "description": "从剪纸作品中选择一个你喜欢的纹样，数字人会解释它可能承载的祝福、戏曲或民俗含义。",
+      "target_users": ["family", "study_tour", "commerce_interest"],
+      "memory_signal": {"topic": "papercut", "strength": 0.35}
+    },
+    {
+      "id": "task_find_painted_motif",
+      "name": "寻找彩绘元素",
+      "type": "art_observation",
+      "trigger_spots": ["spot_huayan_temple"],
+      "description": "在允许观看的区域内留意彩绘或壁画元素，数字人会用简短方式解释它们的宗教或装饰意义。",
+      "target_users": ["culture_deep", "photography"],
+      "memory_signal": {"topic": "mural_art", "strength": 0.3}
+    },
+    {
+      "id": "task_old_commerce_clue",
+      "name": "古镇商贸线索",
+      "type": "story_clue",
+      "trigger_spots": ["spot_pawnshop"],
+      "description": "想象一位清代商旅走进当铺，他最可能需要什么服务？数字人会把你的选择和古镇商业记忆联系起来。",
+      "target_users": ["culture_deep", "commerce_interest"],
+      "memory_signal": {"topic": "historic_commerce", "strength": 0.25}
+    },
+    {
+      "id": "task_dashuhua_memory",
+      "name": "记住一朵铁花",
+      "type": "night_experience",
+      "trigger_spots": ["spot_dashuhua_stage"],
+      "description": "观看打树花后，选择一个最打动你的瞬间：火花、声音、人群、夜色或匠人。系统会根据你的选择生成一张记忆卡片文案。",
+      "target_users": ["night_tour", "photography", "first_time_visitor"],
+      "memory_signal": {"topic": "performance", "strength": 0.4}
+    }
+  ],
+  "products": [
+    {
+      "id": "product_papercut_art",
+      "name": "蔚县剪纸作品",
+      "category": "papercut",
+      "cultural_link": "与国家级非遗蔚县剪纸关联，适合解释纹样、色彩和地方民俗寓意。",
+      "recommend_to": ["culture_deep", "family", "commerce_interest"],
+      "recommendation_style": "基于用户对剪纸纹样、非遗体验或亲子任务的兴趣推荐。",
+      "requires_verification": ["真实商品规格", "价格区间", "购买地点"]
+    },
+    {
+      "id": "product_papercut_bookmark",
+      "name": "剪纸纹样书签/小卡",
+      "category": "light_souvenir",
+      "cultural_link": "轻量化承载剪纸纹样，适合低预算游客或亲子游客。",
+      "recommend_to": ["family", "budget_low", "first_time_visitor"],
+      "recommendation_style": "低打扰推荐，可作为完成剪纸任务后的纪念品。",
+      "requires_verification": ["是否有对应商品", "价格区间"]
+    },
+    {
+      "id": "product_dashuhua_magnet",
+      "name": "打树花主题冰箱贴/纪念章",
+      "category": "performance_souvenir",
+      "cultural_link": "记录暖泉打树花夜游体验，适合观看表演后推荐。",
+      "recommend_to": ["night_tour", "photography", "first_time_visitor"],
+      "recommendation_style": "在用户观看或收藏打树花内容后推荐，强调记忆留存而非直接售卖。",
+      "requires_verification": ["真实商品", "购买地点"]
+    },
+    {
+      "id": "product_fortress_postcard",
+      "name": "古堡主题明信片",
+      "category": "souvenir",
+      "cultural_link": "关联西古堡、古街巷和古镇空间记忆。",
+      "recommend_to": ["photography", "first_time_visitor", "culture_deep"],
+      "recommendation_style": "当用户停留拍照或完成古堡细节任务后推荐。",
+      "requires_verification": ["真实商品", "图像版权"]
+    },
+    {
+      "id": "product_local_specialty_pack",
+      "name": "地方特产组合",
+      "category": "local_specialty",
+      "cultural_link": "用于承接古镇消费服务，但具体品类需后续查证。",
+      "recommend_to": ["commerce_interest", "family"],
+      "recommendation_style": "在离场、休息或用户主动询问伴手礼时推荐。",
+      "requires_verification": ["具体特产品类", "商户名称", "价格区间"]
+    }
+  ],
+  "personas": [
+    {
+      "id": "persona_first_time",
+      "name": "初次到访游客",
+      "goals": ["快速知道怎么逛", "不要错过核心点位", "获得清晰路线"],
+      "preferred_services": ["route_plan", "short_explanation", "must_see_spots"]
+    },
+    {
+      "id": "persona_culture_deep",
+      "name": "文化深度用户",
+      "goals": ["了解文保背景", "听到有依据的讲解", "理解古建和非遗"],
+      "preferred_services": ["evidence_explanation", "deep_story", "source_citation"]
+    },
+    {
+      "id": "persona_family",
+      "name": "亲子家庭",
+      "goals": ["轻松游览", "孩子能参与", "路线安全不累"],
+      "preferred_services": ["interactive_task", "rest_hint", "simple_story"]
+    },
+    {
+      "id": "persona_night_photo",
+      "name": "夜游摄影用户",
+      "goals": ["看打树花", "拍夜景", "找到合适时间和位置"],
+      "preferred_services": ["time_reminder", "photo_tip", "night_route"]
+    },
+    {
+      "id": "persona_commerce",
+      "name": "文创消费用户",
+      "goals": ["买有文化意义的纪念品", "理解推荐理由", "避免被强推"],
+      "preferred_services": ["product_recommendation", "recommendation_reason", "save_for_later"]
+    }
+  ],
+  "context_rules": [
+    {
+      "id": "rule_entry_route",
+      "trigger": {"scene": "entry", "known_time_minutes": true},
+      "action": "recommend_route",
+      "candidate_routes": ["route_first_visit_90min", "route_culture_deep", "route_heritage_family"]
+    },
+    {
+      "id": "rule_long_dwell_culture",
+      "trigger": {"dwell_time_seconds_gte": 180, "spot_tags_any": ["古堡", "水陆壁画", "国家级非遗"]},
+      "action": "offer_deep_explanation",
+      "cooldown_minutes": 10
+    },
+    {
+      "id": "rule_near_show_time",
+      "trigger": {"interest_any": ["打树花", "夜游", "摄影"], "time_relation": "before_performance"},
+      "action": "remind_dashuhua_route",
+      "requires_verification": ["performance_schedule"]
+    },
+    {
+      "id": "rule_family_task",
+      "trigger": {"persona": "family", "spot_tags_any": ["古堡", "蔚县剪纸", "古街巷"]},
+      "action": "trigger_interactive_task",
+      "cooldown_minutes": 15
+    },
+    {
+      "id": "rule_low_disturb_product",
+      "trigger": {"visit_stage": "leaving", "interest_strength_gte": 0.5},
+      "action": "recommend_product_with_reason",
+      "policy": "low_disturbance"
+    }
+  ],
+  "review_needed": [
+    "补充官方或景区运营方确认的开放时间、门票、表演时间和预约方式。",
+    "确认西古堡、暖泉华严寺、暖泉当铺、老君观等点位当前是否对游客开放。",
+    "补充真实导览地图、点位坐标、步行时长和无障碍/亲子安全信息。",
+    "补充真实文创店、剪纸体验点、餐饮点、停车场、卫生间和休息区信息。",
+    "确认所有讲解故事是否适合公开传播，必要时补充官方来源。"
+  ]
+}
